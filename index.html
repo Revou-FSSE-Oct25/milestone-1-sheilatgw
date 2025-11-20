@@ -3,106 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sheila Alvina Tsabita</title>
+    <link href="src/output.css" rel="stylesheet">
+    <title>Document</title>
 </head>
-<body style="margin: 0; padding: 0; background: rgb(242, 241, 237); color: black; font-family: Arial">
-
-    <header style="display: flex; justify-content: space-between; align-items: center; padding: 30px 90px; height: 130px;">
-            <a href="index.html" style="text-decoration: none; font-size: 24px; margin: 0;  color: black;">SHTGW</a>
-        <nav>
-            <a href="#home" style="text-decoration: none; margin-right: 24px; font-size: 24px; color: black;">Home</a>
-            <a href="#about" style="text-decoration: none; margin-right: 24px; font-size: 24px; color: black;">About</a>
-            <a href="#projects" style="text-decoration: none; margin-right: 24px; font-size: 24px; color: black;">Projects</a>
-            <a href="#contact" style="text-decoration: none; font-size: 24px; color: black;">Contact me</a>
+<body class="bg-neutral-900 md:bg-[url('/media/background1.jpg')] md:bg-no-repeat md:bg-top md:bg-contain pt-16 md:pt-30 lg:pt-30 xl:pt-48 text-stone-50">
+    <header id="header" class="bg-transparent px-6 py-4 fixed top-0 left-0 w-full z-50 transition-all duration-300 ">
+        <nav class="flex items-center justify-between">
+           <a href="/" class="font-serif text-base text-stone-50 mr-8 whitespace-nowrap">Sheila Alvina</a>
+           <p class="hidden md:block flex-1 text-base text-stone-50">
+            Software Engineer
+        </p>
+           <ul class="flex gap-1 md:gap-6 text-stone-50 font-medium">
+            <li><a class="hover:line-through"  href="#about">About</a></li>
+            <li><a class="hover:line-through"  href="#works">Works</a></li>
+            <li><a class="hover:line-through"  href="#contact">Contact</a></li>
+           </ul>
         </nav>
+        <div class="mt-4 border-t border-stone-50"></div>
     </header>
+    <script>
+    const header = document.getElementById("header");
+    window.addEventListener("scroll", () => {
+    if (window.scrollY > 10) {
+        header.classList.add("backdrop-blur-sm", "bg-neutral-900/30");
+    } else {
+        header.classList.remove("backdrop-blur-sm", "bg-neutral-900/30");
+    }
+    });
+    </script>
+<main>
+    <section id="/" class="min-h-screen relative grid grid-cols-1 md:grid-cols-[1.3fr_1fr] px-5 md:px-0 py-18 md:py-0 lg:py-0 xl:pt-16 text-white gap-6 md:gap-20">
+      <div class="overflow-hidden flex items-start">
+        <h1 class="font-black px-5 md:pl-16 leading-[0.85] tracking-[-0.06em] text-[80px] md:text-[128px] lg:text-[200px] transform-[scaleX(0.42)] origin-left">
+          ENGINEER<span class="text-[50px] md:text-[70px] lg:text-[100px] pl-4 md:pl-10 text-yellow-100 align-baseline">&</span><br>DEVELOPER
+        </h1>
+      </div>
 
-    <main style="padding: 60px 90px;">
-        <section id="home" style="display: flex; align-items: center; justify-content: flex-start;">
-            <figure style="margin: 0;">
-                <img src="media/img2.JPG" alt="Sheila Alvina Tsabita" style="width: 600px; height: auto; margin-right: 50px;">
-            </figure>
-            <article style="flex: 1;">
-                <h1 style="font-family: Georgia; font-size: 36px; margin-top: 300px; margin-bottom: 20px; text-align: justify;">
-                    I'm Sheila, an undergraduate student aspiring to become a skilled software developer.
-                </h1>
-                <p style="font-size: 20px; line-height: 1.6;">
-                    I'm currently enrolled in Revou Full-Stack Software Engineering program. Read a bit more 
-                    <a href="#about" style="color: black;">about me</a>.
-                </p>
-                <nav style="margin-top: 20px;">
-                    <a href="https://linkedin.com/in/sheila-alvina-tsabita-998312378" target="_blank" style="text-decoration: none;" >
-                        <img src="media/linkedin.png" alt="LinkedIn" style="width: 40px; margin-right: 15px;">
-                    </a>
-                    <a href="https://github.com/sheilatgw" target="_blank" style="text-decoration: none;">
-                        <img src="media/github-logo.png" alt="GitHub" style="width: 40px; margin-right: 15px;">
-                    </a>
-                    <a href="https://www.instagram.com/sheiiavn?igsh=a3c1ZjdwdWM1czdv&utm_source=qr" target="_blank" style="text-decoration: none;" >
-                        <img src="media/insta.png" alt="Instagram" style="width: 40px; margin-right: 15px;">
-                    </a>
-                </nav>
-            </article>
-        </section> <br> <hr style="margin-top: 90px;">
+    <div class="flex flex-col justify-start px-6 md:pt-0 max-w-xl">
+      <p class="font-medium lg:pt-6 text-right text-lg sm:text-xl md:text-xl lg:text-[28px] leading-[1.35]">
+      I AM AN UNDERGRADUATE STUDENT ASPIRING TO BECOME A SKILLED SOFTWARE DEVELOPER.
+      I HAVE A GROWING INTEREST IN WEB DEVELOPMENT AND PROGRAMMING.
+      </p>
 
-        <section id="about" style="margin-top: 60px;" ">
-            <h2 style="font-family: Georgia; font-size: 32px; margin-bottom: 30px;">About me</h2>
-            <div style= "display: flex; justify-content: space-between; font-size: 24px;">
-            <p style="width: 45%; text-align: justify;">I am a first-year undergraduate student currently pursuing a degree in 
-                Informatics Engineering. I got accepted in Sepuluh Nopember Institute of Technology by Computer-Based Writing 
-                Examination (UTBK) with an average score 730. I have a growing interest in web development and programming, 
-                with basic skills in HTML, SQL, and C programming language.</p>
-            <p style="width: 45%; text-align: justify;">I enjoy learning how websites and applications work and am eager to expand
-                 my knowledge in front-end and back-end development. Outside of academics, I like exploring new technologies and
-                  improving my coding skills through personal projects and practice.</p>
-            </div> 
-            <div style="margin-bottom: 50px; margin-right: 120px; font-size: 24px; text-align: right;">
-            <p>Want to have a casual chat  → <a href="https://discord.com/users/1253537382205096081" style="color: black;">Send me a dm</a></p>
-            </div>
-        </section> <br> <hr>
+    <div class="flex font-medium pt-2 justify-end">
+      <a href="#" class="inline-block px-6 py-3 border border-white rounded-full text-lg lg:text-xl tracking-wide hover:bg-white hover:text-black transition-all">
+        CONTACT ME
+      </a>
+    </div>
+  </div>
+</section>
+  <section id="about" class="min-h-screen grid grid-cols-1 lg:grid-cols-2 gap-10 items-center pl-15 pr-5 md:pl-30 md:pr-15 xl:px-30 py-20 bg-neutral-900">
+      <article class="space-y-6">
+        <h2 class="font-black md:text-left leading-[0.85] tracking-[-0.06em] text-[65px] md:text-[70px] lg:text-[80px] transform-[scaleX(0.42)] origin-left whitespace-nowrap">
+          HELLO I AM SHEILA
+        </h2>
+        <br>
+        <p class="md:w-[550px] md:h-[250px] lg:w-[300px] xl:w-[700px] xl:h-[200px] text-start text-base md:text-2xl xl:text-4xl justify-end">
+          I AM A FIRST-YEAR UNDERGRADUATE STUDENT CURRENTLY PURSUING A DEGREE IN 
+          INFORMATICS ENGINEERING AT SEPULUH NOPEMBER INSTITUTE OF TECHNOLOGY. 
+          I ENJOY LEARNING HOW WEBSITES AND APPLICATIONS WORK AND AM EAGER TO EXPAND
+          MY KNOWLEDGE IN FRONT-END AND BACK-END DEVELOPMENT.
+        </p>
+      </article>
+        <picture class="flex justify-center md:justify-end md:pr-10 lg:pt-65 xl:pt-60">
+          <source media="(min-width:768px)" srcset="media/img3.png">
+          <source media="(min-width:320px)" srcset="media/img2.JPG">
+          <img src="media/img1.png" alt="About image" class="max-w-full h-auto md:w-75 md:h-75 lg:w-100 lg:h-100 xl:w-90 xl:h-90 rounded-xl">
+        </picture>
+  </section>
+  <section id="works" class="min-h-screen items-center px-5 md:px-10 lg:px-10 xl:pl-30 py-20 bg-neutral-900">
+      <h3 class="font-semibold text-lg md:text-2xl xl:text-4xl">WORKS & PROJECTS</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 pt-15 md:items-center">
+          <div class="hidden md:flex md:flex-col pb-5 md:py-10">
+            <p class="font-bold leading-[0.85] tracking-[-0.06em] transform-[scaleX(0.42)] text-6xl lg:text-7xl xl:text-8xl whitespace-nowrap">
+            COMING SOON
+          </p>
+          <span class="text-yellow-100 text-center md:pl-6 lg:pl-0 md:text-2xl lg:text-3xl xl:text-4xl">UPDATE LATER</span>
+          </div>
+          <picture class="pb-5 md:py-10">
+          <source media="(min-width:768px)" srcset="media/placeholder.png">
+          <source media="(min-width:320px)" srcset="media/placeholder.png">
+          <img src="media/placeholder.png" alt="placeholder img" class="max-w-full h-auto md:w-75 md:h-40 lg:w-100 lg:h-65 xl:w-140 xl:h-60">
+          </picture>
+          <picture class="pb-15 md:pt-10 md:pb-20">
+          <source media="(min-width:768px)" srcset="media/placeholder.png">
+          <source media="(min-width:320px)" srcset="media/placeholder.png">
+          <img src="media/placeholder.png" alt="placeholder img" class="max-w-full h-auto md:w-75 md:h-40 lg:w-100 lg:h-65 xl:w-140 xl:h-60">
+          </picture>
+          <div class="hidden md:flex md:flex-col md:text-start pb-5 md:py-10">
+            <p class="font-bold leading-[0.85] tracking-[-0.06em] transform-[scaleX(0.42)] text-6xl lg:text-7xl xl:text-8xl whitespace-nowrap">
+            COMING SOON
+          </p>
+          <span class="text-yellow-100 text-center md:pl-6 lg:pl-0 md:text-2xl lg:text-3xl xl:text-4xl">UPDATE LATER</span>
+          </div>
+      </div>
+      <p class="font-medium text-lg md:text-2xl xl:text-4xl">I WILL UPDATE THIS IN FUTURE</p>
+  </section>
+  <section id="contact" class="bg-[url('/media/background1.jpg')] bg-cover min-h-screen items-center px-5 md:px-10 lg:px-10 xl:pl-5 pt-30 pb-20">
+    <div class="overflow-hidden flex items-start">
+        <h1 class="font-black px-5 md:pl-16 leading-[0.85] tracking-[-0.06em] text-[100px] md:text-[140px] lg:text-[200px] transform-[scaleX(0.42)] origin-left">
+          LETS<br>CONNECT
+        </h1>
+      </div>
+      <p class="font-semibold pt-3 pl-3 md:pl-8 lg:pl-10 lg:text-2xl">WHAT DO YOU WANT TO TALK?</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-1 md:gap-2 pt-3 md:items-center pl-3 md:pl-8 lg:pl-10">
+  <div class="font-medium flex md:justify-start">
+    <a href="#" class="inline-block px-4 py-2 border border-white rounded-full text-lg lg:text-xl tracking-wide hover:bg-white hover:text-black transition-all">
+      WEB DEVELOPMENT
+    </a>
+  </div>
+  <div class="font-medium flex md:justify-start md:-ml-30 lg:-ml-56 xl:-ml-120">
+    <a href="#" class="inline-block px-4 py-2 border border-white rounded-full text-lg lg:text-xl tracking-wide hover:bg-white hover:text-black transition-all">
+      FRONTEND DEVELOPMENT
+    </a>
+  </div>
+  <div class="font-medium flex  md:justify-start">
+    <a href="#" class="inline-block px-4 py-2 border border-white rounded-full text-lg lg:text-xl tracking-wide hover:bg-white hover:text-black transition-all">
+      DATABASE
+    </a>
+  </div>
+  <div class="font-medium flex md:justify-start md:-ml-51 lg:-ml-79 xl:-ml-143">
+    <a href="#" class="inline-block px-4 py-2 border border-white rounded-full text-lg lg:text-xl tracking-wide hover:bg-white hover:text-black transition-all">
+      LINEAR ALGEBRA
+    </a>
+  </div>
+  <div class="font-medium flex  md:justify-start">
+    <a href="#" class="inline-block px-4 py-2 border border-white rounded-full text-lg lg:text-xl tracking-wide hover:bg-white hover:text-black transition-all">
+      HORROR
+    </a>
+  </div>
+  <div class="font-medium flex md:justify-start md:-ml-54 lg:-ml-83 xl:-ml-147">
+    <a href="#" class="inline-block px-4 py-2 border border-white rounded-full text-lg lg:text-xl tracking-wide hover:bg-white hover:text-black transition-all">
+      COSPLAY COLLABORATION
+    </a>
+  </div>
+</div>
+  </section>
+</main>
+<footer class="bg-neutral-50 text-neutral-950 border-t border-stone-50 py-10 px-5 md:px-20">
+    <div class="flex gap-4">
+      <a href="https://www.instagram.com/sheiiavn?igsh=a3c1ZjdwdWM1czdv&utm_source=qr" class="hover:text-neutral-950 text-2xl">Instagram</a>
+      <a href="https://github.com/sheilatgw"  class="hover:text-neutral-950 text-2xl">Github</a>
+      <a href="https://www.linkedin.com/in/sheila-alvina-tsabita-998312378/" class="hover:text-neutral-950 text-2xl">Linkedin</a>
+    </div>
+</footer>
 
-        <section id="projects" style="margin-top: 100px;">
-            <h3 style="font-size: 20px; text-align: center; color: rgb(83, 139, 156);">Projects</h3>
-            <p style="font-family: Georgia; font-size: 50px; text-align: center; margin-left: 100px; 
-            margin-right: 100px;margin-bottom: 10px; ">Here is where I keep track of all the things I've done or will do in the future. </p>
-            <p style="font-size: 24px; text-align: center; font-weight: lighter; margin-top: 0;">
-                I will update this later when I got a chance to handle project(s) or after I become a pro.</p>
-        </section> <br><br><hr style="margin-top: 45px; margin-bottom: 90px;">
-        
-        <form>
-        <section id="contact" style="margin-bottom: 40px;">
-            <fieldset style="border: none; max-width: 800px; margin: 0 auto;">
-                <legend style="font-size: 50px; text-align: center;"><strong>Send me a message!</strong></legend>
-                <p style="font-size: 24px; margin-top: 0; text-align: center;">Got a question? Go ahead.</p>
-
-            <div style="display: flex; justify-content: center; gap: 40px; margin-bottom: 30px;">
-                <div style="display: flex; flex-direction: column; flex: 1; max-width: 300px;">
-                <label for="name" style="margin-bottom: 6px; font-size: 14px; color: rgb(88, 81, 35) !important;">Your Name</label>
-                <input type="text" id="name" name="name" placeholder="Enter your name" required 
-                style="padding: 10px 0; border: none; border-bottom: 1px solid rgb(88, 81, 35); background: transparent; font-size: 16px; outline: none;">
-                </div>
-                <div style="display: flex; flex-direction: column; flex: 1; max-width: 300px;">
-                <label for="email" style="margin-bottom: 6px; font-size: 14px; color: rgb(88, 81, 35);">Email Address</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email address" required 
-                style="padding: 10px 0; border: none; border-bottom: 1px solid rgb(88, 81, 35); background: transparent; font-size: 16px; outline: none;">
-                </div>
-            </div>
-            <div style="display: flex; flex-direction: column; align-items: flex-start; justify-content: center; max-width: 640px; margin: 0 auto 30px auto;">
-                <label for="message" style="margin-bottom: 6px; font-size: 14px; color: rgb(88, 81, 35);">Your Message</label>
-                <textarea id="message" name="message" rows="5" placeholder="Write your message here" 
-                style="width: 100%; padding: 10px 0; border: none; border-bottom: 1px solid rgb(88, 81, 35); background: transparent; font-size: 16px; outline: none; resize: none;"></textarea>
-            </div>
-
-            <div style="text-align: center;">
-                <button type="submit" style="padding: 15px 40px; border: 1.5px solid rgb(88, 81, 35); background: transparent; color: rgb(88, 81,35); font-weight: bold; font-size: 16px; letter-spacing: 1px; cursor: pointer; transition: all 0.3s;">
-                SUBMIT →
-                </button>
-            </div>
-            </fieldset>
-        </section>
-        </form>
-    </main>
-    <footer style="padding: 30px 0; text-align: center; font-family: Arial, sans-serif; color: #444;">
-     © 2025 Sheila Alvina Tsabita. All rights reserved.
-    </footer>
 </body>
 </html>
+
